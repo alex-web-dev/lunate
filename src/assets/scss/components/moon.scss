@@ -1,0 +1,38 @@
+.moon {
+  position: absolute;
+  right: -25px;
+  visibility: hidden;
+  opacity: 0;
+
+  &__img {
+    position: relative;
+    width: 638px;
+    height: auto;
+  }
+
+  &__item {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (max-width: 1240px) {
+    &__img {
+      width: 400px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    right: -75px;
+  }
+
+  @media (max-width: 680px) {
+    position: relative;
+    right: 0;
+  }
+}

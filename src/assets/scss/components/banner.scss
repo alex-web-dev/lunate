@@ -1,0 +1,60 @@
+.banner {
+  position: relative;
+  z-index: 1;
+  background: $color-second;
+  padding: 165px 0 110px;
+  
+  &__main {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__info {
+    width: 50%;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__text-content {
+    margin-top: 155px;
+    color: #fff;
+  }
+
+  @media (max-width: 1240px) {
+    padding: 105px 0 72px;
+
+    &__text-content {
+      margin-top: 125px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__text-content {
+      padding: 0 62px;
+    }
+  }
+
+  @media (max-width: 680px) {
+    padding: 50px 0 60px;
+
+    &__main {
+      flex-direction: column;
+    }
+
+    &__info {
+      width: 100%;
+    }
+
+    &__moon {
+      margin-top: 50px;
+    }
+
+    &__text-content {
+      padding: 0;
+    }
+  }
+}

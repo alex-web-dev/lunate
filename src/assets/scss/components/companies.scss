@@ -1,0 +1,24 @@
+.companies {
+  padding: 50px 0 120px;
+  background-color: #fff;
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &--light-gray {
+    background: $color-light-gray;
+  }
+
+  @media (max-width: 1240px) {
+    padding: 30px 0 80px;
+  }
+
+  @media (max-width: 680px) {
+    padding: 20px 0 60px;
+
+    &__title {
+      padding: 0 $container-xs-offset;
+    }
+  }
+}

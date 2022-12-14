@@ -1,0 +1,141 @@
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__mobile-list {
+    display: none;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 28px;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__toggle {
+    height: 24px;
+    display: none;
+  }
+
+  &__lines {
+    position: relative;
+    z-index: 6;
+
+    &,
+    &:before,
+    &:after {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: $color-primary;
+      display: block;
+      transform: rotate(0);
+      transition: transform 0.3s, width 0.3s;
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+    }
+
+    &:before {
+      transform: translateY(-8px);
+    }
+
+    &:after {
+      transform: translateY(8px);
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__item {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+
+    &__link {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 680px) {
+    position: relative;
+
+    &__toggle {
+      display: block;
+    }
+
+    &__content {
+      position: fixed;
+      left: 0;
+      top: 60px;
+      z-index: 3;
+      transform: translateX(100%);
+      padding: 70px $container-xs-offset 45px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: calc(100% - 60px);
+      background: $color-second;
+      opacity: 0;
+      visibility: hidden;
+      overflow-y: auto;
+      transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    }
+
+    &__list {
+      margin-bottom: 40px;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 35px;
+      }
+    }
+
+    &__mobile-list {
+      margin-top: auto;
+      display: block;
+      text-align: center;
+    }
+
+    &__mobile-item {
+      &:not(:first-child) {
+        margin-top: 14px;
+      }
+    }
+
+    &__mobile-link {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.67;
+    }
+
+    &--active &__content {
+      transform: translateX(0);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

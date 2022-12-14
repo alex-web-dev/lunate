@@ -1,0 +1,28 @@
+.advs {
+  &__item {
+    font-weight: 500;
+    line-height: 1.5;
+    color: #fff;
+
+    &:before {
+      content: '✓';
+      margin-right: 13px;
+    }
+
+    &:not(:first-child) {
+      margin-top: 4px;
+    }
+
+    &--dis {
+      &:before {
+        content: '✗';
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__item {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.body-lock {
+  overflow: hidden
+}
+
+.link {
+  color: #fff;
+  transition: color .3s;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.title1,
+.title2 {
+  line-height: 1;
+  text-transform: lowercase;
+}
+
+.title1 {
+  font-size: 84px;
+  text-transform: lowercase;
+  color: $color-primary;
+}
+
+.title2 {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 12px 20px 14px;
+  line-height: 1.5;
+  background-color: transparent;
+  outline: none;
+  color: #fff;
+
+  &::placeholder {
+    color: #fff;
+    text-transform: lowercase;
+  }
+
+  &--area {
+    height: 150px;
+    resize: none;
+  }
+}
+
+@media (max-width: 1240px) {
+  .title1 {
+    font-size: 64px;
+  }
+
+  .title2 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 991px) {
+  .logo {
+    max-width: 135px;
+  }
+
+  .title1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 680px) {
+  .title1 {
+    font-size: 36px;
+  }
+
+  .title2 {
+    font-size: 36px;
+  }
+}

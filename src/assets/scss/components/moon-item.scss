@@ -1,0 +1,33 @@
+.moon-item {
+  padding: 4px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+
+  &__img {
+    max-height: 45px;
+  }
+
+  @media (max-width: 1240px) {
+    width: 57px;
+    height: 57px;
+
+    &__img {
+      max-height: 27px;
+    }
+  }
+
+  @media (max-width: 680px) {
+    width: 55px;
+    height: 55px;
+
+    &__img {
+      max-height: 26px;
+    }
+  }
+}

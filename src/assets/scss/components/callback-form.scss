@@ -1,0 +1,49 @@
+.callback-form {
+  &__field {
+    position: relative;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    color: #fff;
+  }
+
+  &__input {
+    padding-left: 240px;
+  }
+
+  &__submit {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  @media (max-width: 991px) {
+    &__label {
+      top: 15px;
+      font-size: 14px;
+    }
+
+    &__input {
+      padding-left: 185px;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 680px) {
+    &__label {
+      top: 15px;
+      font-size: 12px;
+    }
+
+    &__input {
+      padding-left: 105px;
+      font-size: 12px;
+    }
+  }
+}

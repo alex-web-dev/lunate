@@ -1,0 +1,41 @@
+.about {
+  padding: 100px 0 45px;
+  background-color: $color-light-gray;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 1240px) {
+    padding: 60px 0 25px;
+
+    &__title {
+      margin-bottom: 23px;
+    }
+    
+    &__text-content {
+      p.text-30 {
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__content {
+      padding-left: 62px;
+    }
+  }
+
+  @media (max-width: 680px) {
+    padding-top: 40px;
+
+    &__title {
+      margin-bottom: 15px;
+    }
+
+    &__content {
+      padding-left: 0;
+    }
+  }
+}

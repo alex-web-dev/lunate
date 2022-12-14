@@ -1,0 +1,86 @@
+.step {
+  padding: 20px 0 35px;
+  background-color: $color-primary;
+
+  &:nth-child(1) {
+    background-color: $color-second;
+  }
+
+  &:nth-child(2) {
+    background: linear-gradient(0deg, rgba($color-primary, 0.17), rgba($color-primary, 0.17)), $color-second;
+  }
+
+  &:nth-child(3) {
+    background: linear-gradient(0deg, rgba($color-primary, 0.32), rgba($color-primary, 0.32)), $color-second;
+  }
+
+  &:nth-child(4) {
+    background: linear-gradient(0deg, rgba($color-primary, 0.49), rgba($color-primary, 0.49)), $color-second;
+  }
+
+  &:nth-child(5) {
+    background: linear-gradient(0deg, rgba($color-primary, 0.66), rgba($color-primary, 0.66)), $color-second;
+  }
+
+  &:nth-child(6) {
+    background: linear-gradient(0deg, rgba($color-primary, 0.83), rgba($color-primary, 0.83)), $color-second;
+  }
+
+  &__title {
+    padding-right: 10px;
+    padding-left: 40px;
+    font-size: 30px;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #fff;
+  }
+
+  &__advs {
+    margin-top: 17px;
+  }
+
+  @media (max-width: 991px) {
+    padding: 27px 0 36px;
+    
+    &__content {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      padding-left: 0;
+      font-size: 24px;
+      line-height: 1.25;
+    }
+
+    &__advs {
+      margin-top: 10px;
+    }
+  }
+
+  @media (max-width: 680px) {
+    padding-left: $container-xs-offset;
+    padding-right: $container-xs-offset;
+
+    &__title {
+      position: relative;
+      padding-right: 15px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+        @include pseudo-icon('../img/icons/arrow.svg', 14px, 10px);
+        transition: transform .4s .1s;
+      }
+
+      &.accordion-btn--active {
+        &:after {
+          transform: translateY(-50%) rotate(-90deg);
+        }
+      }
+    }
+  }
+}

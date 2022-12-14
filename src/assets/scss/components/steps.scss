@@ -1,0 +1,31 @@
+.steps {
+  padding: 100px 0 50px;
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: 1240px) {
+    padding: 60px 0 30px;
+
+    &__title {
+      margin-bottom: 29px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__title {
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media (max-width: 680px) {
+    padding: 40px 0 20px;
+    
+    &__title {
+      padding: 0 $container-xs-offset;
+    }
+  }
+}
