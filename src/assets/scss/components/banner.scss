@@ -17,6 +17,7 @@
   &__title {
     position: relative;
     z-index: 2;
+    pointer-events: none;
   }
 
   &__text-content {
@@ -54,6 +55,7 @@
     }
 
     &__text-content {
+      margin-top: 60px;
       padding: 0;
     }
   }

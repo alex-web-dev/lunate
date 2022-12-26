@@ -24,10 +24,15 @@
     &:hover {
       color: $color-primary;
     }
+
+    &--active {
+      color: $color-primary;
+    }
   }
 
   &__toggle {
     height: 24px;
+    width: 16px;
     display: none;
   }
 
@@ -38,6 +43,7 @@
     &,
     &:before,
     &:after {
+      margin-left: auto;
       width: 4px;
       height: 4px;
       border-radius: 50%;

@@ -1,7 +1,7 @@
 .moon-item {
   padding: 4px;
-  width: 90px;
-  height: 90px;
+  width: 135px;
+  height: 135px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,24 +10,42 @@
   border-radius: 50%;
 
   &__img {
-    max-height: 45px;
+    max-width: 120px;
+    max-height: 68px;
+
+    &--small {
+      max-width: 106px;
+      max-height: 60px;
+    }
   }
 
   @media (max-width: 1240px) {
-    width: 57px;
-    height: 57px;
+    width: 86px;
+    height: 86px;
 
     &__img {
-      max-height: 27px;
+      max-width: 75px;
+      max-height: 41px;
+
+      &--small {
+        max-width: 66px;
+        max-height: 36px;
+      }
     }
   }
 
   @media (max-width: 680px) {
-    width: 55px;
-    height: 55px;
+    width: 83px;
+    height: 83px;
 
     &__img {
-      max-height: 26px;
+      max-width: 72px;
+      max-height: 39px;
+
+      &--small {
+        max-width: 63px;
+        max-height: 34px;
+      }
     }
   }
 }

@@ -1,37 +1,22 @@
 .text-content {
   text-transform: lowercase;
   line-height: 1.5;
-  
+
   p {
+    font-size: 30px;
+    line-height: 1.6;
+    font-weight: 300;
+
     &:not(:first-child) {
-      margin-top: 4px;
+      margin-top: 18px;
     }
-
-    &.text-30 {
-      font-size: 30px;
-      line-height: 1.6;
-      font-weight: 300;
-
-      &:not(:first-child) {
-        margin-top: 18px;
-      }
-    }
-
-    &.text-20 {
-      font-size: 20px;
-
-      &:not(:first-child) {
-        margin-top: 10px;
-      }
-    }
-
   }
 
   ul {
     &:not(:first-child) {
       margin-top: 27px;
     }
-    
+
     li {
       position: relative;
       padding-left: 32px;
@@ -54,18 +39,28 @@
     }
   }
 
+  .text-20 {
+    p {
+      font-size: 20px;
+
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+    }
+  }
+
   &--white {
     color: #fff;
   }
 
   @media (max-width: 1240px) {
     p {
-      &.text-30 {
-        font-size: 24px;
-        line-height: 1.5;
-      }
+      font-size: 24px;
+      line-height: 1.5;
+    }
 
-      &.text-20 {
+    .text-20 {
+      p {
         font-size: 18px;
         line-height: 1.56;
       }
@@ -75,12 +70,12 @@
       &:not(:first-child) {
         margin-top: 22px;
       }
-      
+
       li {
         padding-left: 27px;
         font-size: 14px;
         line-height: 1.29;
-  
+
         &:before {
           top: 11px;
           width: 2px;
@@ -92,12 +87,12 @@
 
   @media (max-width: 680px) {
     p {
-      &.text-30 {
-        font-size: 18px;
-        line-height: 1.33;
-      }
+      font-size: 18px;
+      line-height: 1.33;
+    }
 
-      &.text-20 {
+    .text-20 {
+      p {
         font-size: 16px;
       }
     }

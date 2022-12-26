@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
   if ($moon) {
     $moon.classList.add('moon--active');
     
-    const speed = 0.008;
+    let speed = 0.004;
     let elapsedTime = 0;
     let width = $moon.offsetWidth;
     let height = $moon.offsetHeight;
@@ -14,6 +14,9 @@ window.addEventListener('load', () => {
       width = $moon.offsetWidth;
       height = $moon.offsetHeight;
     });
+
+    $moon.addEventListener('mouseover', () => speed = 0.002);
+    $moon.addEventListener('mouseout', () => speed = 0.004);
 
     animate();
 
@@ -27,16 +30,13 @@ window.addEventListener('load', () => {
         const itemHeight = $item.offsetWidth;
         const orbitLength = 6.3;
         const elapsed = elapsedTime + (orbitLength / $moonItems.length * index);
-        const offsetPercent = {
-          x: Math.cos(elapsed) * 58 + 49,
-          y: Math.cos(elapsed) * 35 + Math.sin(elapsed) * 45 + 50,
-        };
+        const offsetPercent = getOffsetPercent(elapsed);
         const position = {
           x: width / 100 * offsetPercent.x - offsetPercent.x * itemWidth / 100,
           y: height / 100 * offsetPercent.y - offsetPercent.y * itemHeight / 100,
         };
 
-        if (Math.sin(elapsed) < (0.4) && zIndexes[index] !== -1) {
+        if (Math.sin(elapsed) < (-0.4) && zIndexes[index] !== -1) {
           zIndexes[index] = -1;
           $item.style.zIndex = zIndexes[index];
         } else if (Math.sin(elapsed) > (0.4) && zIndexes[index] !== 1) {
@@ -49,3 +49,17 @@ window.addEventListener('load', () => {
     }
   }
 });
+
+function getOffsetPercent(elapsed) {
+  if (window.innerWidth >= 370) {
+    return {
+      x: Math.cos(elapsed) * 62 + 49,
+      y: Math.cos(elapsed) * 35 + Math.sin(elapsed) * 55 + 50,
+    };
+  } else {
+    return {
+      x: Math.cos(elapsed) * 73 + 49,
+      y: Math.cos(elapsed) * 35 + Math.sin(elapsed) * 65 + 50,
+    };
+  }
+}

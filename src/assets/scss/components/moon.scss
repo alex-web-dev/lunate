@@ -3,6 +3,7 @@
   right: -25px;
   visibility: hidden;
   opacity: 0;
+  animation: move 8s infinite linear;
 
   &__img {
     position: relative;
@@ -34,5 +35,27 @@
   @media (max-width: 680px) {
     position: relative;
     right: 0;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(10px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }

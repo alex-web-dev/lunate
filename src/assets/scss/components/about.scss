@@ -6,6 +6,12 @@
     margin-bottom: 50px;
   }
 
+  &__text-content {
+    &:not(:first-child) {
+      margin-top: 18px;
+    }
+  }
+
   @media (max-width: 1240px) {
     padding: 60px 0 25px;
 

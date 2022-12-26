@@ -1,4 +1,25 @@
 .main {
+  padding-top: 77px;
   flex: 1 1 auto;
   overflow: hidden;
+
+  &__about {
+    margin-top: 50px;
+  }
+
+  @media (max-width: 1240px) {
+    &__about {
+      margin-top: 30px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding-top: 74px;
+  }
+
+  @media (max-width: 680px) {
+    &__about {
+      margin-top: 20px;
+    }
+  }
 }
